@@ -8,37 +8,24 @@
 
         <!-- build:css({app,.tmp}) /css/main.css -->
         <!-- Custom CSS -->
+        <link rel="stylesheet" href="/_bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/main.css">
         <!-- endbuild -->
 
     </head>
     <body>
 
+        {% include header.html %}
+
         <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
           {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Emmanuel Marcha<br />
-                <a href="mailto:info@emmanuelmarcha.com">info@emmanuelmarcha.com</a>
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
         </div>
 
+        {% include footer.html %}
+
     <!-- build:js({app,.tmp}) /js/scripts.js -->
+    <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
     <!-- endbuild -->
     </body>
